@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Portafolio Académico - 6° Semestre</title>
+
+<style>
+
+:root{
+--bg:#f2f4f7;
+--card:#ffffff;
+--text:#1e272e;
+--psicologia:#6c5ce7;
+--organismos:#27ae60;
+--comunicacion:#e74c3c;
+--historia:#2980b9;
+--tics:#f39c12;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI;
+scroll-behavior:smooth;
+}
+
+body{
+background:var(--bg);
+color:var(--text);
+}
+
+nav{
+background:#2d3436;
+color:white;
+padding:18px;
+text-align:center;
+font-size:22px;
+font-weight:bold;
+box-shadow:0 3px 10px rgba(0,0,0,0.2);
+}
+
+.main-container{
+max-width:1200px;
+margin:auto;
+padding:30px;
+}
+
+.grid-materias{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+margin-bottom:80px;
+}
+
+.materia-link{
+text-decoration:none;
+color:inherit;
+}
+
+.materia-btn{
+background:var(--card);
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 8px 20px rgba(0,0,0,0.1);
+transition:0.3s;
+border-bottom:8px solid var(--materia-color);
+}
+
+.materia-btn:hover{
+transform:translateY(-8px);
+}
+
+.img-container{
+height:170px;
+background:#ddd;
+}
+
+.img-container img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.materia-info{
+padding:20px;
+text-align:center;
+}
+
+.profesor-box{
+display:flex;
+align-items:center;
+gap:10px;
+background:#f5f5f5;
+padding:10px;
+border-radius:10px;
+margin-top:10px;
+}
+
+.profesor-box img{
+width:45px;
+height:45px;
+border-radius:50%;
+object-fit:cover;
+background:#ddd;
+}
+
+.prof-text span{
+font-size:12px;
+color:#666;
+}
+
+.seccion-temario{
+background:white;
+padding:40px;
+border-radius:15px;
+margin-bottom:40px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+max-width:800px;
+margin-left:auto;
+margin-right:auto;
+}
+
+.tema{
+padding:15px;
+margin:10px 0;
+border-radius:8px;
+background:#f5f5f5;
+border-left:5px solid;
+}
+
+.psicologia-sec{border-top:10px solid var(--psicologia)}
+.psicologia-sec .tema{border-color:var(--psicologia)}
+
+.organismos-sec{border-top:10px solid var(--organismos)}
+.organismos-sec .tema{border-color:var(--organismos)}
+
+.comunicacion-sec{border-top:10px solid var(--comunicacion)}
+.comunicacion-sec .tema{border-color:var(--comunicacion)}
+
+.historia-sec{border-top:10px solid var(--historia)}
+.historia-sec .tema{border-color:var(--historia)}
+
+.tics-sec{border-top:10px solid var(--tics)}
+.tics-sec .tema{border-color:var(--tics)}
+
+.btn-back{
+display:inline-block;
+margin-top:20px;
+background:#eee;
+padding:10px 20px;
+border-radius:5px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.btn-back:hover{
+background:#ddd;
+}
+
+.editores-sec{
+background:white;
+padding:40px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+margin-top:60px;
+}
+
+.grid-editores{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+gap:25px;
+margin-top:30px;
+text-align:center;
+}
+
+.editor-card img{
+width:120px;
+height:120px;
+border-radius:50%;
+object-fit:cover;
+background:#ddd;
+}
+
+.editor-card p{
+margin-top:10px;
+font-weight:600;
+font-size:14px;
+}
+
+footer{
+margin-top:50px;
+text-align:center;
+color:#777;
+font-size:14px;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+PORTAFOLIO ACADÉMICO — 6° SEMESTRE
+</nav>
+
+<div class="main-container">
+
+<div class="grid-materias">
+
+<a href="#psicologia" class="materia-link">
+<div class="materia-btn" style="--materia-color:var(--psicologia)">
+<div class="img-container"><img src="psicologia.jpg"></div>
+<div class="materia-info">
+<h3>Psicología II</h3>
+<div class="profesor-box">
+<img src="prof-psicologia.jpg">
+<div class="prof-text">
+<span>Docente</span>
+<strong>Bertha Gabriela Piña</strong>
+</div>
+</div>
+</div>
+</div>
+</a>
+
+<a href="#organismos" class="materia-link">
+<div class="materia-btn" style="--materia-color:var(--organismos)">
+<div class="img-container"><img src="organismos.jpg"></div>
+<div class="materia-info">
+<h3>Organismos: Estructuras</h3>
+<div class="profesor-box">
+<img src="prof-organismos.jpg">
+<div class="prof-text">
+<span>Docente</span>
+<strong>Nicolas Norberto Solorzano</strong>
+</div>
+</div>
+</div>
+</div>
+</a>
+
+<a href="#comunicacion" class="materia-link">
+<div class="materia-btn" style="--materia-color:var(--comunicacion)">
+<div class="img-container"><img src="comunicacion.jpg"></div>
+<div class="materia-info">
+<h3>Comunicación y Sociedad II</h3>
+<div class="profesor-box">
+<img src="prof-comunicacion.jpg">
+<div class="prof-text">
+<span>Docente</span>
+<strong>Luis Angel Casso</strong>
+</div>
+</div>
+</div>
+</div>
+</a>
+
+<a href="#historia" class="materia-link">
+<div class="materia-btn" style="--materia-color:var(--historia)">
+<div class="img-container"><img src="historia.jpg"></div>
+<div class="materia-info">
+<h3>Conciencia Histórica III</h3>
+<div class="profesor-box">
+<img src="prof-historia.jpg">
+<div class="prof-text">
+<span>Docente</span>
+<strong>Sergio Jovani Martinez</strong>
+</div>
+</div>
+</div>
+</div>
+</a>
+
+<a href="#tics" class="materia-link">
+<div class="materia-btn" style="--materia-color:var(--tics)">
+<div class="img-container"><img src="tics.jpg"></div>
+<div class="materia-info">
+<h3>TICs 4: Diseño Digital</h3>
+<div class="profesor-box">
+<img src="prof-tics.jpg">
+<div class="prof-text">
+<span>Docente</span>
+<strong>Enrique Garcia De la Rosa</strong>
+</div>
+</div>
+</div>
+</div>
+</a>
+
+</div>
+
+<section id="psicologia" class="seccion-temario psicologia-sec">
+<h1>Psicología II</h1>
+
+<div class="tema"><strong>Personalidad:</strong> Rasgos y patrones únicos de comportamiento.</div>
+
+<div class="tema"><strong>Psicopatología:</strong> Estudio de ansiedad, depresión y esquizofrenia.</div>
+
+<div class="tema"><strong>Influencia social:</strong> Conformidad, obediencia y liderazgo.</div>
+
+<a href="#" class="btn-back">Volver al inicio</a>
+</section>
+
+<section id="organismos" class="seccion-temario organismos-sec">
+<h1>Organismos: estructuras y procesos</h1>
+
+<div class="tema"><strong>Clasificación taxonómica:</strong> Dominios y reinos.</div>
+
+<div class="tema"><strong>Homeostasis:</strong> Regulación del equilibrio interno.</div>
+
+<div class="tema"><strong>Metabolismo celular:</strong> Fotosíntesis y respiración.</div>
+
+<a href="#" class="btn-back">Volver al inicio</a>
+</section>
+
+<section id="comunicacion" class="seccion-temario comunicacion-sec">
+<h1>Comunicación y Sociedad II</h1>
+
+<div class="tema"><strong>Medios masivos:</strong> Influencia en la opinión pública.</div>
+
+<div class="tema"><strong>Redes sociales:</strong> Fake news y algoritmos.</div>
+
+<div class="tema"><strong>Publicidad:</strong> Estrategias psicológicas del consumo.</div>
+
+<a href="#" class="btn-back">Volver al inicio</a>
+</section>
+
+<section id="historia" class="seccion-temario historia-sec">
+<h1>Conciencia Histórica III</h1>
+
+<div class="tema"><strong>Guerra Fría:</strong> Bloques capitalista y comunista.</div>
+
+<div class="tema"><strong>Movimientos sociales:</strong> Tlatelolco 1968.</div>
+
+<div class="tema"><strong>Conflictos actuales:</strong> Migración y crisis climática.</div>
+
+<a href="#" class="btn-back">Volver al inicio</a>
+</section>
+
+<section id="tics" class="seccion-temario tics-sec">
+<h1>TICs 4</h1>
+
+<div class="tema"><strong>Hojas de cálculo:</strong> Tablas dinámicas.</div>
+
+<div class="tema"><strong>Bases de datos:</strong> Organización con SQL.</div>
+
+<div class="tema"><strong>Seguridad informática:</strong> Malware y phishing.</div>
+
+<a href="#" class="btn-back">Volver al inicio</a>
+</section>
+
+<section class="editores-sec">
+
+<h1>✏️ Editores del Portafolio</h1>
+
+<div class="grid-editores">
+
+<div class="editor-card">
+<img src="mi foto.jpeg">
+<p>Cruz Armijo Leslie Dayana</p>
+</div>
+
+<div class="editor-card">
+<img src="jessica.jpg">
+<p>Jessica Yackelin Hernandez Saldivar</p>
+</div>
+
+<div class="editor-card">
+<img src="ingrid.jpg">
+<p>Gonzales Carreon Ingrid Alexa</p>
+</div>
+
+<div class="editor-card">
+<img src="valentina.jpg">
+<p>Esparza Ramos Valentina Jazmin</p>
+</div>
+
+<div class="editor-card">
+<img src="daniela.jpg">
+<p>Vicencio Cruz Daniela</p>
+</div>
+
+<div class="editor-card">
+<img src="mirella.jpg">
+<p>Mirella Marizol</p>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+Portafolio escolar — 6° semestre
+</footer>
+
+</div>
+
+</body>
+</html>
